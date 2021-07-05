@@ -33,7 +33,7 @@ function createAwesomeBooks(e) {
       // eslint-disable-next-line no-alert
       alert('please fill all the form');
     } else {
-      newAweSomeBook = new awesomeBook(title, author);
+      newAweSomeBook = new awesomeBooks(title, author);
       addBook(newAweSomeBook);
 
       const bookObj = {
@@ -45,7 +45,7 @@ function createAwesomeBooks(e) {
       const bookIndex = localStorage.length === 0 ? 0 : localStorage.length;
       localStorage.setItem(bookIndex.toString(), JSON.stringify(bookObj));
 
-      const form = document.getElementById('book-form');
+      const form = document.getElementById('form');
       form.reset();
       displayBook(newAweSomeBook);
     }
@@ -53,5 +53,5 @@ function createAwesomeBooks(e) {
   validateForm(title, author);
 }
 
-submit.addEventListener('click', (e) => createBook(e));
+submit.addEventListener('click', (e) => createAwesomeBooks(e));
 

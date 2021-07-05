@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -6,16 +7,25 @@
   <link rel="stylesheet" href="style.css">
   <title>Awesome Books</title>
 </head>
+
 <body>
-  <div id="wrapper">
-    <h1>All Awesome Books</h1>
-    <div id="books"></div>
-    <input type="text" id="title" name="title" class="book" placeholder="title"><br>
-    <input type="text" id="author" name="title" class="book" placeholder="author">
-    <br>
-  
-    <button id="add">Add Book</button>
-  </div>
-  <script>script.js</script>
+  <form id="form">
+    <div id="wrapper">
+      <h1>All Awesome Books</h1>
+      <div id="books"></div>
+      <div class="form-group">
+        <input type="text" id="title" name="title" class="book" placeholder="title"><br>
+      </div>
+
+      <div class="form-group">
+        <input type="text" id="author" name="title" class="book" placeholder="author">
+      </div><br>
+
+      <button id="submit">Add Book</button>
+
+    </div>
+  </form>
+  <script src="script.js"></script>
 </body>
+
 </html>
