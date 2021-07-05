@@ -5,3 +5,7 @@ function awesomeBooks(title, author) {
   this.author = author;
 }
 
+function addBook(newAweSomeBook) {
+  myBooks.push(newAweSomeBook);
+}
+
