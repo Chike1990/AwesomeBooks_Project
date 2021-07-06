@@ -6,6 +6,40 @@ class Book {
   
 }
 
+//methods
+function addBook() {
+    
+}
+
+function displayBook() {
+  
+}
+
+function removeBook() {
+  
+}
+
+function createNewBookFromLocalStorage() {
+  
+}
+
+function createBook(e) {
+
+}
+
+function bookCollection() {
+  function addBook();
+  function displayBook();
+  function removeBook();
+  function createNewBookFromLocalStorage();
+  function createBook(e);
+}
+
+
+
+
+
+
 const submit = document.getElementById('submit');
 
 const myBook = [];
