@@ -1,3 +1,11 @@
+class Book {
+  constructor (title, author) {
+    this.bookTitle = title;
+    this.bookAuthor = author;
+  }
+  
+}
+
 const submit = document.getElementById('submit');
 
 const myBook = [];
