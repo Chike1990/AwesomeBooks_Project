@@ -5,7 +5,6 @@ const myBook = [];
 function Books(title, author) {
   this.title = title;
   this.author = author;
-  
 }
 
 function addBook(newBook) {
@@ -19,23 +18,20 @@ function displayBook(newBook) {
     <h4>${newBook.title}</h4>
     <h4>${newBook.author}</h4>
     <button><a href="#" class="btn btn-danger btn-sm remove">Remove</a></button><hr>`;
-    
 
   list.appendChild(row);
 
   const bookIndex = myBook
-      .map((book) => book.title)
-      .indexOf(newBook.title);
+    .map((book) => book.title)
+    .indexOf(newBook.title);
     // update book read state in local storage
-    localStorage.setItem(bookIndex.toString(), JSON.stringify(newBook));
-  ;
+  localStorage.setItem(bookIndex.toString(), JSON.stringify(newBook));
 
   // remove button
   const removeBtn = row.querySelector('#book-list');
   // removes from view
   removeBtn.addEventListener('click', () => {
-    bookRow.removeChild(card);
-    // removes from array
+  // removes from array
     const bookIndex = myBook
       .map((book) => book.title)
       .indexOf(newBook.title);
@@ -73,7 +69,6 @@ document.querySelector('#book-list').addEventListener('click', (e) => {
 function createBook(e) {
   const title = document.getElementById('title').value;
   const author = document.getElementById('author').value;
-  
 
   e.preventDefault();
 
@@ -89,7 +84,6 @@ function createBook(e) {
       const bookObj = {
         title: newBook.title,
         author: newBook.author,
-        
       };
 
       // Put the object into storage
