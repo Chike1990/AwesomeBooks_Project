@@ -28,17 +28,17 @@ function displayBook(newBook) {
   localStorage.setItem(bookIndex.toString(), JSON.stringify(newBook));
 
   // remove button
-  function removeBook(id){
+  function removeBook() {
     document.addEventListener('click', () => {
       const bookIndex = myBook
-      .map((book) => book.title)
-      .indexOf(newBook.title);
-    myBook.splice(bookIndex, 1);
-    // remove book from local storage
-    localStorage.removeItem(bookIndex);
-    })
+        .map((book) => book.title)
+        .indexOf(newBook.title);
+      myBook.splice(bookIndex, 1);
+      // remove book from local storage
+      localStorage.removeItem(bookIndex);
+    });
   }
-  
+  removeBook();
 }
 
 function createNewBookFromLocalStorage(title, author) {
