@@ -29,13 +29,6 @@ class Book {
   }
 }
 
-
-
-
-
-
-
-
 document.querySelector('#book-list').addEventListener('click', (e) => {
   if (e.target.classList.contains('remove')) {
     e.target.parentElement.parentElement.remove();
