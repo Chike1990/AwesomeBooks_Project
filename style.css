@@ -161,7 +161,22 @@ h2 {
 
 .container__contact ul {
   align-self: flex-start;
-  margin: 0 0 0 40px;
+  margin: 20px 0 0 800px;
+}
+
+.form-control input{
+  align-self: center;
+}
+
+.add_form {
+  align-self: center;
+  margin: 20px 0 0 13px;
+  border: 50px 50px;
+}
+
+.add_btn {
+  align-self: flex;
+  margin: 8px 0 0 612px;
 }
 
 .footer {
