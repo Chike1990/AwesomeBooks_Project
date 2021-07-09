@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  border: black solid 2px;
+  width: 100%;
+  height: 100vh;
+  padding: 0 10px;
+  background-color: rgb(180, 171, 170);
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+#book-list {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.table-row {
+  display: flex !important;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+  padding: 20px;
+}
+
+.table-row:nth-child(2n) {
+  background-color: rgb(192, 153, 153);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid black;
+  padding: 5px;
+  margin: 5px 5px 0 5px;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+}
+
+.nav-list li {
+  padding-right: 3px;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: black;
+}
+
+.date-now {
+  align-self: flex-end;
+  padding: 3px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 0 5px;
+  height: 85%;
+}
+
+.container {
+  border: 2px black solid;
+  margin: 10px 0 15px 0;
+}
+
+h2 {
+  color: black;
+  text-align: center;
+  margin: 5px 0;
+}
+
+.book {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
+  align-items: center;
+}
+
+.book:nth-of-type(2n + 1) {
+  background-color: lightgray;
+}
+
+.book__name {
+  margin-right: 5px;
+  quotes: '"' '"' "'" "'";
+}
+
+.book__name::before {
+  content: open-quote;
+}
+
+.book__name::after {
+  content: close-quote;
+}
+
+.book__author {
+  margin-left: 5px;
+}
+
+.book__remove-btn {
+  font-weight: bolder;
+  height: auto;
+  width: auto;
+  padding: 3px 5px;
+  box-shadow: 4px 4px 2px rgb(0, 0, 0);
+  background-color: #ed842a;
+}
+
+.book-description {
+  display: flex;
+}
+
+.add {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
+#book-form {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
+.book__line {
+  width: 110px;
+  margin: auto;
+  height: 3px;
+  color: black;
+  border: none;
+  background-color: black;
+}
+
+.btn-remove {
+  margin-left: 100%;
+}
+
+.book__addnew {
+  margin-top: 15px;
+}
+
+.add__add-btn {
+  background-color: #44afdc;
+  font-weight: bolder;
+  height: auto;
+  width: 40px;
+  padding: 3px 5px;
+  box-shadow: 4px 4px 2px rgb(0, 0, 0);
+  align-self: flex-end;
+}
+
+.input {
+  margin-bottom: 10px;
+}
+
+.container__add {
+  display: none;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.container__contact {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+  margin-bottom: 30px;
+  width: 90%;
+}
+
+.container__contact ul {
+  align-self: flex-start;
+  margin: 20px 0 0 800px;
+}
+
+.form-control input {
+  align-self: center;
+}
+
+.add_form {
+  align-self: center;
+  margin: 20px 0 0 13px;
+}
+
+.add_btn {
+  margin: 8px 0 0 612px;
+}
+
+.footer {
+  border: black 2px solid;
+  text-align: center;
+}
