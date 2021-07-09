@@ -17,13 +17,9 @@ header {
   flex-direction: column;
 }
 
-#book-list{
- display: flex !important; 
+#book-list {
+  display: flex !important;
   flex-direction: column !important;
-}
-
-.table-row:nth-child(2n){
-  background-color: rgb(192, 153, 153);
 }
 
 .table-row {
@@ -32,6 +28,10 @@ header {
   flex-direction: row;
   width: 100%;
   padding: 20px;
+}
+
+.table-row:nth-child(2n) {
+  background-color: rgb(192, 153, 153);
 }
 
 nav {
@@ -143,9 +143,10 @@ h2 {
   background-color: black;
 }
 
-.btn-remove{
+.btn-remove {
   margin-left: 100%;
 }
+
 .book__addnew {
   margin-top: 15px;
 }
@@ -184,19 +185,16 @@ h2 {
   margin: 20px 0 0 800px;
 }
 
-.form-control input{
+.form-control input {
   align-self: center;
-  
 }
 
 .add_form {
   align-self: center;
   margin: 20px 0 0 13px;
-  border: 50px 50px;
 }
 
 .add_btn {
-  align-self: flex;
   margin: 8px 0 0 612px;
 }
 
