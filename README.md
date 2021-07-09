@@ -1,10 +1,11 @@
 # Awesome Books App
 
-Awesome Books is a basic website that allows users to add/remove books from a list. This is achieved using plain HTML, JavaScript objects, arrays, DOM, and basic events.
+Awesome Books is a basic website that allows users to add/remove books from a list. It provide interface for adding book, for visualizing the list of added books, and for contact information. This is achieved using plain HTML, JavaScript objects, arrays, DOM, and basic events.
 
 
-![Screenshot](img/addBookUI.png)
-![Screenshot](img/appPage.png)
+![Screenshot](img/listpage.png)
+![Screenshot](img/addNew.png)
+![Screenshot](img/contact.png)
 
 ## Built With
 
@@ -21,7 +22,7 @@ Awesome Books is a basic website that allows users to add/remove books from a li
 
 ### Setup: How to start the TicTacToe game
 
-- clone our repo: `git clone git@github.com:enionsouza/TicTacToe.git`
+- clone our repo: `https://github.com/Chike1990/Awesome_books`
 - cd into: `cd index.html`
 - run `index.html`
 ## Authors
