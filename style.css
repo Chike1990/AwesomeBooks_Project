@@ -9,7 +9,7 @@ body {
   width: 100%;
   height: 100vh;
   padding: 0 10px;
-  background-color: rgb(223, 247, 247);
+  background-color: rgb(180, 171, 170);
 }
 
 header {
@@ -22,10 +22,14 @@ header {
   flex-direction: column !important;
 }
 
+.table-row:nth-child(2n){
+  background-color: rgb(192, 153, 153);
+}
+
 .table-row {
   display: flex !important;
-  justify-content: space-between !important;
-  flex-direction: row !important;
+  justify-content: space-between;
+  flex-direction: row;
   width: 100%;
   padding: 20px;
 }
@@ -198,4 +202,5 @@ h2 {
 
 .footer {
   border: black 2px solid;
+  text-align: center;
 }
