@@ -11,10 +11,10 @@ class Book {
 class Store {
   static getBooks() {
     let books;
-    if (localStorage.getItem('books') === null) {
+    if (localStorage.getItem("books") === null) {
       books = [];
     } else {
-      books = JSON.parse(localStorage.getItem('books'));
+      books = JSON.parse(localStorage.getItem("books"));
     }
 
     return books;
@@ -23,11 +23,11 @@ class Store {
   static addBook(book) {
     const books = Store.getBooks();
     books.push(book);
-    localStorage.setItem('books', JSON.stringify(books));
+    localStorage.setItem("books", JSON.stringify(books));
   }
 
   setToLocalStorage() {
-    localStorage.setItem('books', JSON.stringify(books));
+    localStorage.setItem("books", JSON.stringify(books));
   }
 
   static removeBook(id) {
@@ -39,7 +39,7 @@ class Store {
       }
     });
 
-    localStorage.setItem('books', JSON.stringify(books));
+    localStorage.setItem("books", JSON.stringify(books));
   }
 }
 
@@ -51,45 +51,50 @@ class MyBook {
   }
 
   static addBookToList(book) {
-    const list = document.querySelector('#book-list');
-    const row = document.createElement('tr');
+    const list = document.querySelector("#book-list");
+    const div = document.createElement("div");
+    div.classList.add("table-row")
 
-    row.innerHTML = `
-      <td>${book.title}</td>
-      <td>${book.author}</td>
-      <td><a href="#" class="btn btn-danger btn-sm delete">Remove</a></td>
-    `;
+    div.innerHTML = `
+            <div>
+              <span>${book.title}</span>
+                <span>${book.author}</span>
+              </div>
+              <div>
+              <a href="#" class="btn btn-danger btn-sm delete">Remove</a>
+            </div>
+      `;
 
-    list.appendChild(row);
+    list.appendChild(div);
   }
 
   static deleteBook(el) {
-    if (el.classList.contains('delete')) {
+    if (el.classList.contains("delete")) {
       el.parentElement.parentElement.remove();
     }
   }
 
   static clearFields() {
-    document.querySelector('#title').value = '';
-    document.querySelector('#author').value = '';
+    document.querySelector("#title").value = "";
+    document.querySelector("#author").value = "";
   }
 }
 
 // Event: Display Books
-document.addEventListener('DOMContentLoaded', MyBook.displayBooks);
+document.addEventListener("DOMContentLoaded", MyBook.displayBooks);
 
 // Event: Add a Book
-document.querySelector('#book-form').addEventListener('submit', (e) => {
+document.querySelector("#book-form").addEventListener("submit", (e) => {
   // Prevent actual submit
   e.preventDefault();
 
   // Get form values
-  const title = document.querySelector('#title').value;
-  const author = document.querySelector('#author').value;
+  const title = document.querySelector("#title").value;
+  const author = document.querySelector("#author").value;
 
   // Validate
-  if (title === '' || author === '') {
-    MyBook.alert('Please fill in all fields');
+  if (title === "" || author === "") {
+    MyBook.alert("Please fill in all fields");
   } else {
     // Instatiate book
     const book = new Book(title, author);
@@ -106,7 +111,7 @@ document.querySelector('#book-form').addEventListener('submit', (e) => {
 });
 
 // Event: Remove a Book
-document.querySelector('#book-list').addEventListener('click', (e) => {
+document.querySelector("#book-list").addEventListener("click", (e) => {
   // Remove book from Store
   MyBook.deleteBook(e.target);
 
@@ -116,39 +121,39 @@ document.querySelector('#book-list').addEventListener('click', (e) => {
 
 const store = new Store([]);
 
-const addBtn = document.querySelector('#submit');
+const addBtn = document.querySelector("#submit");
 
 /* global luxon */
 /* eslint no-undef: "error" */
 
 const displayDate = () => {
-  const dateNowFormat = luxon.DateTime.now().toFormat('FF');
-  document.querySelector('.date-now').innerText = dateNowFormat;
+  const dateNowFormat = luxon.DateTime.now().toFormat("FF");
+  document.querySelector(".date-now").innerText = dateNowFormat;
 };
 
-const listBtn = document.querySelector('.list__nav');
-const addBookBtn = document.querySelector('.list__add');
-const contactBtn = document.querySelector('.list__contact');
-const listOption = document.querySelector('.container__list');
-const listAdd = document.querySelector('.container__add');
-const listContact = document.querySelector('.container__contact');
+const listBtn = document.querySelector(".list__nav");
+const addBookBtn = document.querySelector(".list__add");
+const contactBtn = document.querySelector(".list__contact");
+const listOption = document.querySelector(".container__list");
+const listAdd = document.querySelector(".container__add");
+const listContact = document.querySelector(".container__contact");
 
-listBtn.addEventListener('click', () => {
-  listOption.style.display = 'block';
-  listAdd.style.display = 'none';
-  listContact.style.display = 'none';
+listBtn.addEventListener("click", () => {
+  listOption.style.display = "block";
+  listAdd.style.display = "none";
+  listContact.style.display = "none";
 });
 
-addBookBtn.addEventListener('click', () => {
-  listOption.style.display = 'none';
-  listAdd.style.display = 'flex';
-  listContact.style.display = 'none';
+addBookBtn.addEventListener("click", () => {
+  listOption.style.display = "none";
+  listAdd.style.display = "flex";
+  listContact.style.display = "none";
 });
 
-contactBtn.addEventListener('click', () => {
-  listOption.style.display = 'none';
-  listAdd.style.display = 'none';
-  listContact.style.display = 'flex';
+contactBtn.addEventListener("click", () => {
+  listOption.style.display = "none";
+  listAdd.style.display = "none";
+  listContact.style.display = "flex";
 });
 
 setInterval(() => {
