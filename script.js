@@ -26,6 +26,10 @@ class Store {
     localStorage.setItem('books', JSON.stringify(books));
   }
 
+  setToLocalStorage() {
+    localStorage.setItem('books', JSON.stringify(books));
+  }
+
   static removeBook(id) {
     const books = Store.getBooks();
 
@@ -103,9 +107,50 @@ document.querySelector('#book-form').addEventListener('submit', (e) => {
 
 // Event: Remove a Book
 document.querySelector('#book-list').addEventListener('click', (e) => {
-  // Remove book from UI
+  // Remove book from Store
   MyBook.deleteBook(e.target);
 
   // Remove book from store
   Store.removeBook(e.target.parentElement.previousElementSibling.textContent);
 });
+
+const store = new Store([]);
+
+const addBtn = document.querySelector('#submit');
+
+/* global luxon */
+/* eslint no-undef: "error" */
+
+const displayDate = () => {
+  const dateNowFormat = luxon.DateTime.now().toFormat('FF');
+  document.querySelector('.date-now').innerText = dateNowFormat;
+};
+
+const listBtn = document.querySelector('.list__nav');
+const addBookBtn = document.querySelector('.list__add');
+const contactBtn = document.querySelector('.list__contact');
+const listOption = document.querySelector('.container__list');
+const listAdd = document.querySelector('.container__add');
+const listContact = document.querySelector('.container__contact');
+
+listBtn.addEventListener('click', () => {
+  listOption.style.display = 'block';
+  listAdd.style.display = 'none';
+  listContact.style.display = 'none';
+});
+
+addBookBtn.addEventListener('click', () => {
+  listOption.style.display = 'none';
+  listAdd.style.display = 'flex';
+  listContact.style.display = 'none';
+});
+
+contactBtn.addEventListener('click', () => {
+  listOption.style.display = 'none';
+  listAdd.style.display = 'none';
+  listContact.style.display = 'flex';
+});
+
+setInterval(() => {
+  displayDate();
+}, 1000);

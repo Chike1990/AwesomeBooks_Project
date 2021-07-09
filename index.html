@@ -1,36 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+  <header class="header">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
 
     <title>Awesome Books</title>
-</head>
+  
+      <nav>
+        <p>Awesome Books</p>
+        <ul class="nav-list">
+          <li><a href="#container__list" class="list__nav">List |</a></li>
+          <li><a href="#container__add" class="list__add">Add new |</a></li>
+          <li><a href="#container__contact" class="list__contact">Contact</a></li>
+        </ul>
+      </nav>
+      <p class="date-now"></p>
+    </header>
+
 
 <body>
-    <div class="container mt-4">
-        <h1>All Awesome Books</h1>
+
+    <main>
+      <div class="container__list" id="container__list">
+        <h2 class="books__header--title">All awesome books</h2>
+        <div class="container" id="list">
         <table class="table table-striped mt-5">
 
             <tbody id="book-list"></tbody>
 
 
         </table>
+        
+          
+        </div>
+      </div>
+      <div class="container__add" id="container__add">
+        <h2 class="book__addnew">Add a New Book</h2>
+        
         <form id="book-form">
             <div class="form-group">
 
-                <input type="text" name="title" id="title" class="form-control" placeholder="add book title">
+                <input type="text" name="title" id="title" class="form-control input" placeholder="add book title">
             </div>
             <div class="form-group">
 
-                <input type="text" name="author" id="author" class="form-control" placeholder="add book author">
+                <input type="text" name="author" id="author" class="form-control input" placeholder="add book author">
             </div>
-            <input type="submit" id="submit" value="Add Book" class="btn btn-primary btn-block">
+            <input type="submit" id="submit" value="Add Book" class="add__add-btn input"">
         </form>
-
-    </div>
+      </div>
+      <div class="container__contact" id="container__contact">
+        <h2 class="book__addnew">Contact information</h2>
+        <p class="contact__content">
+          Do you have any questions or do you just want to say "Hello"? You can
+          reach out to us.
+        </p>
+        <ul class="contact__info">
+          <li class="email">Our email</li>
+          <li class="phone">Our phone number</li>
+          <li class="address">Our address</li>
+        </ul>
+      </div>
+    </main>
+    <footer class="footer">
+      <p>Copyright 2021</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/luxon@1.27.0/build/global/luxon.min.js"></script>
     <script src="script.js"></script>
 </body>
 
