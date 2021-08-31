@@ -13,10 +13,10 @@ function addBook(newBook) {
 
 function displayBook(newBook) {
   const list = document.querySelector('#book-list');
-  const row = document.createElement('div');
+  const row = document.createElement('tr');
   row.innerHTML = `
-    <h4>${newBook.title}</h4>
-    <h4>${newBook.author}</h4>
+    <td>${newBook.title}</td>
+    <td>${newBook.author}</td>
     <button><a href="#" class="btn btn-danger btn-sm remove">Remove</a></button><hr>`;
 
   list.appendChild(row);

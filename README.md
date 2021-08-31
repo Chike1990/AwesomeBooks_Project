@@ -5,6 +5,7 @@ Awesome Books is a basic website that allows users to add/remove books from a li
 
 ![Screenshot](img/addBookUI.png)
 ![Screenshot](img/appPage.png)
+![Screenshot](img/styleImage.png)
 
 ## Built With
 
@@ -18,12 +19,6 @@ Awesome Books is a basic website that allows users to add/remove books from a li
 - Terminal (Bash)
 - Git
 - JavaScript
-
-### Setup: How to start the TicTacToe game
-
-- clone our repo: `git clone git@github.com:enionsouza/TicTacToe.git`
-- cd into: `cd index.html`
-- run `index.html`
 ## Authors
 
 👤 Chukwuma Obasi
